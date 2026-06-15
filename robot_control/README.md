@@ -4,3 +4,5 @@
 
 
 [TV 리모컨 - 40000 steps](https://drive.google.com/drive/folders/1wpsXbQqvYdjModinD0RY2pTHtCgtKFGQ?usp=drive_link)
+
+robot_trigger_server.py 는 RPi 에서 실행하여 로봇팔쪽 PC로 하여금 robot_start.py를 실행하도록 하는 코드
