@@ -16,7 +16,7 @@
 #   state_uploader   : 매초 각 방 현재 상태를 콘솔 출력(옵션: 서버 push)
 #   batch_inventory_sender : 5초마다 재고(창문 제외) 변화를 묶어 1회 전송 → 요청 수↓
 #   CameraStream     : 카메라별 캡처 스레드. 항상 '최신 프레임'만 유지 → 지연 최소화
-#   FrameStreamer    : 카메라별 ffmpeg TCP 송출 스레드(가득차면 프레임 버림 = 저지연)
+#   FrameStreamer    : 카메라별 ffmpeg TCP 송출 스레드(최신 프레임을 30fps 고정 반복 송출)
 #   메인 루프        : 프레임 읽기 → RoomMonitor.process(검출+이벤트) → capture 갱신 → TCP 송출
 #
 # ▷ 검출 → 재고 추적 (RoomMonitor.process)
@@ -72,7 +72,7 @@ DEBUG = args.debug
 # 설정
 # ==========================================
 # 모델 폴더는 이 스크립트와 같은 위치에 두면 됨 (실행 위치 무관 — 스크립트 기준 상대경로)
-MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "yolo_20_yolo11n_ncnn_model")  # NCNN 416 폴더
+MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "yolo_20_yolo11n_ncnn_model")  # NCNN 416 폴더 (8클래스, pill_pouch 제거)
 CAM_IDS = [0, 2]            # /dev/video0(Wed Camera 1), /dev/video3(Wed Camera 2) — USB 재연결 시 v4l2-ctl로 확인
 CONF = 0.25
 CLASS_CONF = {'phone': 0.3, 'remote': 0.4, 'window_open': 0.25, 'window_closed': 0.35}  # 클래스별 최소 신뢰도(없으면 CONF). 역광 창문→가짜 검출 억제용
@@ -225,16 +225,20 @@ def ws_client():
 
 
 # ==========================================
-# TCP 영상 송출 (스레드 + 큐, 가득차면 버림)
+# TCP 영상 송출 (스레드, 최신 프레임을 STREAM_FPS 고정 주기로 반복 송출)
 # ==========================================
 class FrameStreamer:
     """프레임을 ffmpeg(libx264, zerolatency)로 TCP(mpegts) 송출.
-    큐(maxsize=2)가 차면 오래된 프레임을 버리고 최신만 보냄 → 지연이 쌓이지 않음(저지연).
+    send()는 최신 프레임만 갈아끼우고, 송출 스레드가 STREAM_FPS(30) 고정 주기로
+    같은 프레임을 반복 전송 → 수신측(30fps 가정 녹화기)과 박자가 맞아
+    녹화 영상 길이가 실제 시간과 일치한다 (추론 FPS가 낮아도 무관).
     ffmpeg는 별도 스레드에서 stdin으로 raw BGR을 받아 인코딩→송출(?listen으로 PC 접속 대기)."""
     def __init__(self, port):
         self.port = port
-        self.q = queue.Queue(maxsize=2)
+        self.latest = None
+        self.lock = threading.Lock()
         self.proc = None
+        self.running = True
         threading.Thread(target=self._run, daemon=True).start()
 
     def _run(self):
@@ -242,7 +246,7 @@ class FrameStreamer:
             'ffmpeg', '-y',
             '-f', 'rawvideo', '-pix_fmt', 'bgr24',
             '-s', f'{STREAM_W}x{STREAM_H}',
-            '-use_wallclock_as_timestamps', '1',
+            '-framerate', str(STREAM_FPS),
             '-i', '-',
             '-c:v', 'libx264', '-preset', 'ultrafast', '-tune', 'zerolatency',
             '-g', '15', '-pix_fmt', 'yuv420p',
@@ -250,31 +254,30 @@ class FrameStreamer:
             '-f', 'mpegts', f'tcp://0.0.0.0:{self.port}?listen'
         ]
         self.proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-        while True:
-            frame = self.q.get()
+        interval = 1.0 / STREAM_FPS
+        next_t = time.time()
+        while self.running:
+            next_t += interval
+            delay = next_t - time.time()
+            if delay > 0:
+                time.sleep(delay)
+            else:
+                next_t = time.time()   # 처리 밀림 시 일정 리셋(따라잡기 폭주 방지)
+            with self.lock:
+                frame = self.latest
             if frame is None:
-                break
+                continue
             try:
                 self.proc.stdin.write(frame.tobytes())
             except Exception:
                 pass
 
     def send(self, frame):
-        if self.q.full():
-            try:
-                self.q.get_nowait()
-            except queue.Empty:
-                pass
-        try:
-            self.q.put_nowait(frame)
-        except queue.Full:
-            pass
+        with self.lock:
+            self.latest = frame
 
     def close(self):
-        try:
-            self.q.put_nowait(None)
-        except Exception:
-            pass
+        self.running = False
         if self.proc:
             try:
                 self.proc.stdin.close()
