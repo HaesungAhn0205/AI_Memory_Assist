@@ -159,24 +159,10 @@
 * **일주일에 3회 이상 같은 이벤트 발생 시 자동 루틴으로 판단, 사용자에게 루틴 등록 여부 질문**
 * **만약 사용자가 거절한 루틴의 경우 데이터를 삭제하지 않고, DB에 저장하여 같은 루틴 탐지 시 질문하지 않음**
 
-<table align="center">
-  <tr>
-    <td align="center"><b>액추에이터 회로도</b></td>
-    <td align="center"><b>컨베이어 벨트 회로도</b></td>
-  </tr>
-  <tr>
-    <td>
-      <img src="./images/액추에이터%20회로도.png" width="500px" alt="액추에이터 회로도">
-    </td>
-    <td>
-      <img src="./images/컨베이어%20벨트%20회로도.png" width="500px" alt="컨베이어 벨트 회로도">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">OpenCR + MDD10A 기반 제어</td>
-    <td align="center">Arduino Uno + L9110S 기반 제어</td>
-  </tr>
-</table>
+**5. DB ERD**
+<p align="left">
+  <img src="./images/img_db.png" width="60%" alt="dberd" />
+</p>
 
 ---
 
