@@ -87,10 +87,10 @@
 
 ## 🔍 상세 기능 설명
 **1. REST API SERVER**
-<p align="center">
+<p align="left">
   <img src="./images/img_api.png" width="60%" alt="Architecture" />
 </p>
-<table align="center">
+<table align="left">
   <tr>
     <td align="center"><b>API</b></td>
     <td align="center"><b>기능</b></td>
@@ -151,39 +151,13 @@
   </tr>
 </table>
 
-* **임계 구역 설정:** 단일 진입로에 임계 구역을 지정하여 동시 진입으로 인한 데드락 상태를 방지합니다.
-
-<table align="center">
-  <tr>
-    <td><img src="./images/임계%20구역%20설정1.png" width="300px" alt="임계 구역 설정1"></td>
-    <td><img src="./images/임계%20구역%20설정2.png" width="300px" alt="임계 구역 설정2"></td>
-    <td><img src="./images/임계%20구역%20설정3.png" width="300px" alt="임계 구역 설정3"></td>
-  </tr>
-</table>
-
-* **경로 재탐색:** 장애물이나 타 로봇으로 인해 경로가 차단될 경우 실시간으로 우회 경로를 계산합니다.
-
-<table align="center">
-  <tr>
-    <td><img src="./images/경로%20재탐색1.png" width="450px" alt="경로 재탐색1"></td>
-    <td><img src="./images/경로%20재탐색2.png" width="450px" alt="경로 재탐색2"></td>
-  </tr>
-</table>
-
-* **대피소 활용:** 충돌 위험 시 가장 가까운 대피소 좌표로 이동하여 통로를 확보합니다.
-
-<table align="center">
-  <tr>
-    <td><img src="./images/대피소%20활용1.png" width="450px" alt="대피소 활용1"></td>
-    <td><img src="./images/대피소%20활용2.png" width="450px" alt="대피소 활용2"></td>
-  </tr>
-</table>
-
-**4. 액추에이터 및 컨베이어벨트 자동화 시스템**
-<p align="center">
-  <img src="./images/액추에이터%20및%20컨베이어벨트.png" width="100%" alt="전체 시스템 실물 사진">
-  <br><i>[실제 구현된 하드웨어 시스템]</i>
+**4. 자동 루틴 파악 코드**
+<p align="left">
+  <img src="./images/img_routine.png" width="60%" alt="routine" />
 </p>
+
+* **일주일에 3회 이상 같은 이벤트 발생 시 자동 루틴으로 판단, 사용자에게 루틴 등록 여부 질문**
+* **만약 사용자가 거절한 루틴의 경우 데이터를 삭제하지 않고, DB에 저장하여 같은 루틴 탐지 시 질문하지 않음**
 
 <table align="center">
   <tr>
