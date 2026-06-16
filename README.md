@@ -118,6 +118,7 @@
 <p align="center">
   <img src="./images/img_vod.png" width="90%" alt="Architecture" />
 </p>
+
 * **1분 단위로 저장 됨**
 * **3일 이상이 지난 영상 데이터는 자동 삭제**
 
