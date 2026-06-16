@@ -21,35 +21,22 @@
 본 프로젝트는 기존 인력 중심 운송과 고정 경로 시스템의 한계를 극복하고자 A* 알고리즘 기반 자율 주행과 ROS2, Qt 시스템을 결합한 다중 AMR 통합 관제 시스템(AMR FLEET CORE)을 개발했습니다. 실시간 충돌 감지 및 동적 예외 처리(우선순위, 우회 등)를 통해 물류 지연을 방지하고, 지능형 현장 관리의 효율성을 극대화하는 것을 목표로 합니다.
 
 ### 📝 한 줄 요약
-SLAM 자율 주행과 A* 알고리즘을 결합하여, 다중 로봇 간의 경로 간섭을 방지하고 작업 이력을 실시간으로 관리하는 지능형 통합 관제 시스템
+짜파게티 먹고싶다
 
 ---
 
 ## 📅 프로젝트 개요
-- **프로젝트 명:** AMR FLEET CORE
-- **수행 기간:** 2026.04.20 ~ 2026.04.27
+- **프로젝트 명:** ARU (AI Remembers U)
+- **수행 기간:** 2026.06.03 ~ 2026.06.15
 - **주요 기능**
   - **1:** TurtleBot 2대 기반 다중 물류 로봇 제어
-  - **2:** A* 알고리즘 기반 경로 탐색 및 장애물 회피
-  - **3:** 우선순위, 임계구역, 재탐색, 대피소 기반 충돌 예외 처리
-  - **4:** Qt 관제 UI와 MariaDB를 통한 실시간 모니터링 및 작업 이력 관리
+  - **2:** 123
+  - **3:** 123
+  - **4:** 123
 
 ---
 
-## 🛠 기술 스택
-| 분류 | 기술 Stack |
-| :--- | :--- |
-| **Languages** | C++, Python, Arduino(Sketch) |
-| **Communication** | ROS2, Wi-Fi, Serial(UART) |
-| **Frameworks** | Qt 6 |
-| **Database** | MariaDB |
-| **Hardware/OS** | Raspberry Pi4, OpenCR, Arduino Uno, TurtleBot3, LiDAR(LDS-01, LDS-02), Linear Actuator, Servo Motor(MG995), 컨베이어벨트, 적외선 근접 센서(TCRT5000), Ubuntu 22.04 |
-
----
-
-## 🧩 시스템 아키텍처
-
-### H/W Architecture
+## 🛠 기술 스택 & 아키텍처
 <p align="center">
   <img src="./images/Architecture.png" width="90%" alt="Architecture" />
 </p>
