@@ -36,6 +36,24 @@
 
 ---
 
+## 🎬 시연 영상
+<table align="center">
+  <tr>
+    <td align="center"><b>ARU 애플리케이션 시연</b></td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://www.youtube.com/watch?v=s1lU2BHdtIo">
+        <img src="https://img.youtube.com/vi/s1lU2BHdtIo/0.jpg" width="900px">
+      </a>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+---
+
 ## 🛠 기술 스택 & 아키텍처
 <p align="center">
   <img src="./images/img_arch.png" width="90%" alt="Architecture" />
@@ -188,51 +206,8 @@
 
 * **리니어 액추에이터 작동:** 적외선 센서가 물체를 감지하면, 액추에이터가 9초간 전진하여 물건을 밀어내고 다시 9초간 후진하여 제자리로 돌아옵니다 (1세트 동작).
 * **컨베이어 벨트 작동:** 입구 적외선 센서에 물건이 감지되면 벨트가 회전합니다. 물건이 끝 지점(출구 적외선 센서)에 도착하면 물류가 쌓이지 않도록 즉시 벨트를 멈춥니다.
-
+* 
 ---
-
-## 🖼 시연 화면
-<table width="100%">
-  <tr>
-    <td align="center">
-      <img src="./images/시연%20화면1.png" width="100%" alt="시연 화면1">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="./images/시연%20화면2.png" width="100%" alt="시연 화면2">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="./images/시연%20화면3.png" width="100%" alt="시연 화면3">
-    </td>
-  </tr>
-</table>
-
----
-
-## 🎬 시연 영상
-<table align="center">
-  <tr>
-    <td align="center"><b>A* 다중 로봇 경로 최적화 시연</b></td>
-    <td align="center"><b>Qt 기반 관제 시스템</b></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://youtu.be/I8Uspe3LYt0?si=sRhghHwbzkAC9PaZ">
-        <img src="https://img.youtube.com/vi/I8Uspe3LYt0/0.jpg" width="450px">
-      </a>
-    </td>
-    <td>
-      <a href="https://youtu.be/W_x_qIhRaaY?si=ARUJPUI9Pgl4YZpU">
-        <img src="https://img.youtube.com/vi/W_x_qIhRaaY/0.jpg" width="450px">
-      </a>
-    </td>
-  </tr>
-</table>
-
-<hr>
 
 ## ⚠️ 보완점 및 향후 과제
 - **Pose 및 좌표 재보정**  
