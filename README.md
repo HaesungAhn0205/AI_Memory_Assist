@@ -132,7 +132,7 @@
   </tr>
 </table>
 
-
+<br/>
 
 **2. 녹화 영상 저장 기능**
 <p align="center">
