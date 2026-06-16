@@ -90,7 +90,7 @@
 <p align="left">
   <img src="./images/img_api.png" width="60%" alt="Architecture" />
 </p>
-<table align="left">
+<table>
   <tr>
     <td align="center"><b>API</b></td>
     <td align="center"><b>기능</b></td>
