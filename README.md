@@ -38,7 +38,7 @@
 
 ## 🛠 기술 스택 & 아키텍처
 <p align="center">
-  <img src="./images/Architecture.png" width="90%" alt="Architecture" />
+  <img src="./images/img_arch.png" width="90%" alt="Architecture" />
 </p>
 
 ---
@@ -68,22 +68,48 @@
 ---
 
 ## 🔍 상세 기능 설명
-**1. 실시간 통합 관제 대시보드**
+**REST API SERVER**
+<p align="center">
+  <img src="./images/img_api.png" width="90%" alt="Architecture" />
+</p>
 <table align="center">
   <tr>
-    <td align="center"><b>로봇 모니터링 및 원격 제어</b></td>
-    <td align="center"><b>작업 이력 및 재고 관리</b></td>
-    <td align="center"><b>데이터베이스(DB) 구조</b></td>
+    <td align="center"><b>API</b></td>
+    <td align="center"><b>기능</b></td>
   </tr>
   <tr>
     <td>
-      <img src="./images/그리드%20맵%20기반%20실시간%20제어.png" width="330" height="250" alt="그리드 맵 기반 실시간 제어"/>
+      auth/login
     </td>
     <td>
-      <img src="./images/작업%20이력%20관리%20및%20실시간%20재고%20현황.png" width="330" height="250" alt="작업 이력 관리 및 실시간 재고 현황"/>
+      - 기본적인 로그인 기능
+    </td>
+  </tr>
+  <tr>
+    <td>
+      - event/, edge/
     </td>
     <td>
-      <img src="./images/MariaDB%20기반%20테이블%20구조.png" width="330" height="250" alt="MariaDB 기반 테이블 구조"/>
+      - 사물이 사라지거나, 특정 이벤트가 발생 관련 이벤트
+      - 수동 데이터 삽입, 이미지 비교 분석 추론 후 데이터 삽입, 현재 탐지 객체 목록 리스트 반환 구현
+    </td>
+  </tr>
+  <tr>
+    <td>
+      chat/query
+    </td>
+    <td>
+      - 챗 봇 기능 API로서 사용자의 질문 내용을 분석
+      - 과거, 현재, 논외 대화를 구분(intent)하는 알고리즘 진행
+      - intent 값에 따라 실행 코드 로직 구성
+    </td>
+  </tr>
+  <tr>
+    <td>
+      routine/
+    </td>
+    <td>
+      - 사용자의 생활 루틴 관련 이벤트 API
     </td>
   </tr>
   <tr>
