@@ -114,22 +114,22 @@
   </tr>
 </table>
 
+
+
 **2. 녹화 영상 저장 기능**
 <p align="center">
-  <img src="./images/img_vod.png" width="90%" alt="Architecture" />
+  <img src="./images/img_vod.png" width="90%" alt="cctv" />
 </p>
 
 * **1분 단위로 저장 됨**
 * **3일 이상이 지난 영상 데이터는 자동 삭제**
 
-**3. 다중 로봇 협동 예외 처리**
-* **우선순위 양보:** 동일 좌표 진입 시 높은 우선순위의 로봇이 먼저 통과하고 낮은 순위 로봇은 대기합니다.
-
+**3. 시스템 프롬프트 롤 설정**
 <table align="center">
   <tr>
-    <td><img src="./images/우선순위%20양보1.png" width="300px" alt="우선순위 양보1"></td>
-    <td><img src="./images/우선순위%20양보2.png" width="300px" alt="우선순위 양보2"></td>
-    <td><img src="./images/우선순위%20양보3.png" width="300px" alt="우선순위 양보3"></td>
+    <td><img src="./images/img_prom1.png" width="300px" alt="prompt1"></td>
+    <td><img src="./images/img_prom2.png" width="300px" alt="prompt1"></td>
+    <td><img src="./images/img_prom3.png" width="300px" alt="prompt1"></td>
   </tr>
 </table>
 
