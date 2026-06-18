@@ -55,6 +55,21 @@
 
 <hr>
 
+<table align="center">
+  <tr>
+    <td align="center"><b>ARU 로봇팔 시연</b></td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://youtu.be/66-pFlFDmbc?si=yLgezzZP7GBSh6kA">
+        <img src="https://img.youtube.com/vi/s1lU2BHdtIo/0.jpg" width="900px">
+      </a>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
 ---
 
 ## 🛠 기술 스택 & 아키텍처
