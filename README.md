@@ -62,7 +62,7 @@
   <tr>
     <td>
       <a href="https://youtu.be/66-pFlFDmbc?si=yLgezzZP7GBSh6kA">
-        <img src="https://img.youtube.com/vi/yLgezzZP7GBSh6kA.jpg" width="900px">
+        <img src="https://img.youtube.com/vi/66-pflFDmbc/0.jpg" width="900px">
       </a>
     </td>
   </tr>
