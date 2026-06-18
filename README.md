@@ -1,16 +1,15 @@
 
-
 ## 🚛 AI Remembers You
 
 ### 🛠 개발 배경
 <table>
   <tr>
     <td align="center">
-      <img src="./images/자율%20이동%20로봇%20시장%20규모.png" height="250px" alt="자율 이동 로봇 시장 규모" />
+      <img src="https://github.com/user-attachments/assets/9aaacc9e-24b9-4c94-b385-754cd48cf9ab" height="250px" alt="자율 이동 로봇 시장 규모" />
       <br><b>자율 이동 로봇 시장 규모</b>
     </td>
     <td align="center">
-      <img src="./images/자율%20이동%20로봇%20시장%20분석%20그래프.png" height="250px" alt="자율 이동 로봇 시장 분석 그래프" />
+      <img src="https://github.com/user-attachments/assets/dc6c195c-be25-43fd-8569-e698e03f2509" height="250px" alt="자율 이동 로봇 시장 분석 그래프" />
       <br><b>자율 이동 로봇 시장 분석 그래프</b>
     </td>
   </tr>
