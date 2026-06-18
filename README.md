@@ -4,13 +4,13 @@
 ### 🛠 개발 배경
 <table align="center" width="750">
   <tr>
-    <td align="center" width="250">
-      <img src="https://github.com/user-attachments/assets/9aaacc9e-24b9-4c94-b385-754cd48cf9ab" width="250" alt="약 복용 관련 사례" />
+    <td align="center" width="500">
+      <img src="https://github.com/user-attachments/assets/9aaacc9e-24b9-4c94-b385-754cd48cf9ab" width="500" alt="약 복용 관련 사례" />
       <br><b>약 복용을 깜빡하거나 과(過)복용하는 사례</b>
     </td>
     <td width="250">&nbsp;</td>
-    <td align="center" width="250">
-      <img src="https://github.com/user-attachments/assets/dc6c195c-be25-43fd-8569-e698e03f2509" width="250" alt="창문 미닫힘 침입 범죄 통계" />
+    <td align="center" width="500">
+      <img src="https://github.com/user-attachments/assets/dc6c195c-be25-43fd-8569-e698e03f2509" width="500" alt="창문 미닫힘 침입 범죄 통계" />
       <br><b>창문을 제대로 닫지 않아 침입 범죄 발생 통계</b>
     </td>
   </tr>
