@@ -4,11 +4,11 @@
 ### 🛠 개발 배경
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9aaacc9e-24b9-4c94-b385-754cd48cf9ab" width="400" />
+  <img src="https://github.com/user-attachments/assets/9aaacc9e-24b9-4c94-b385-754cd48cf9ab" width="300" />
    <br>
       <b>〈약 복용을 까먹거나 과 복용하는 사례〉</b>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/user-attachments/assets/dc6c195c-be25-43fd-8569-e698e03f2509" width="400" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/user-attachments/assets/dc6c195c-be25-43fd-8569-e698e03f2509" width="300" />
    <br>
       <b>〈창문을 제대로 닫지 않아 침입 범죄 발생 통계〉</b>
 </p>
