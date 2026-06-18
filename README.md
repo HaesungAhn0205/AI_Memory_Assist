@@ -47,7 +47,7 @@
   <tr>
     <td>
       <a href="https://www.youtube.com/watch?v=s1lU2BHdtIo">
-        <img src="img_screenshot_robot.jpg" width="900px">
+        <img src="https://img.youtube.com/vi/s1lU2BHdtIo/0.jpg" width="900px">
       </a>
     </td>
   </tr>
