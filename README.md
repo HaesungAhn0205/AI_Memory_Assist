@@ -6,18 +6,19 @@
 <table align="center" border="0">
   <tr>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/9aaacc9e-24b9-4c94-b385-754cd48cf9ab" width="250" />
+      <img src="https://github.com/user-attachments/assets/9aaacc9e-24b9-4c94-b385-754cd48cf9ab" width="300" />
       <br>
       <b>〈약 복용을 까먹거나 과 복용하는 사례〉</b>
     </td>
-    <td>&nbsp;</td>
+    <td>&nbsp;&nbsp;</td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/dc6c195c-be25-43fd-8569-e698e03f2509" width="250" />
+      <img src="https://github.com/user-attachments/assets/dc6c195c-be25-43fd-8569-e698e03f2509" width="300" />
       <br>
       <b>〈창문을 제대로 닫지 않아 침입 범죄 발생 통계〉</b>
     </td>
   </tr>
 </table>
+
 중앙치매센터(증가하는 초기 치매 환자 통계), 보건복지부(치매 시장 확장 전망) 통계와 약 오용 문제 사례 등의 조사를 통해, 저희는 일상 데이터를 기반으로 한 개인화 서비스의 중요성을 실감했습니다.
 사용자가 리마인더와 알람 등으로 수동으로 기록해야 했던 기존의 치매 대상 서비스들의 번거로움과 한계를 극복하고자, **LLM 기반 문맥 인지 기술과 Vector DB(또는 RAG 기술)**를 결합한 **[AI 일상 기억 및 루틴 파악 시스템: ARU]**을 개발했습니다. 실시간 일상 맥락 분석을 통해 사용자의 핵심 행동 패턴을 파악하고 장기 기억(Long-term Memory)화합니다. 그리고 이를 기반으로 맞춤형 루틴 추천 및 피드백을 제공하여 일상적 건망증 또는 초기 치매로 인한 일상생활 저하을 보조합니다. 부가적으로 사용자의 패턴에 맞지 않게 위치한 물체를 제자리로 옮겨주는 기능 또한 제공합니다.
 
